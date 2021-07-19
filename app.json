@@ -18,7 +18,7 @@
         }
     },
     "buildpacks": [{
-        "url" : "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        "url" : "https://t.me/Royalbotz"
     },{
         "url" : "heroku/python"
     }

@@ -36,7 +36,7 @@ def list(update, context):
 
 def contact(update, context: CallbackContext):
     keyboard = [[InlineKeyboardButton(
-        "Contact", url="telegram.me/phantom2152")], ]
+        "Contact", url="telegram.me/TgBotsChat")], ]
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 

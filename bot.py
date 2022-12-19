@@ -7,7 +7,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 dest = "telegramMusic/"
 
-TOKEN = '5862929153:AAGLEMTNGuOslFHfwzl1ncsCvhHTvRhcYCs'
+TOKEN = '5595298904:AAExEMcbyKGA3cBdIECmFB-AD55Zx8L0uOM'
 
 
 def start(update, context):

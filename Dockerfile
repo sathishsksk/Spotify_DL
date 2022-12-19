@@ -10,4 +10,4 @@ RUN pip3 install --no-cache-dir -r req.txt
 
 COPY . .
 
-CMD ["python3", "bot.py"]
+CMD ["python3", "start.sh"]

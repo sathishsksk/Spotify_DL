@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """Transcodes given file to opus or vorbis, if it has an aac-like extension
-(aac, 3gp, mp4, m4a, m4b, mpg).
+(mp3, aac, 3gp, mp4, m4a, m4b, mpg).
 
 By default the bitrate of the source material is used, but may be
 limited by the --bitrate parameter or the BITRATE environment variable,
@@ -121,7 +121,7 @@ bitrate = min(bitrate, bitrate_src)
 
 
 # assert aac-like extension (from wikipedia)
-has_aac_ext = re.match(r'.*\.(aac|3gp|mp4|m4a|m4b|mpg)$', args.path)
+has_aac_ext = re.match(r'.*\.(mp3|aac|3gp|mp4|m4a|m4b|mpg)$', args.path)
 force = args.f or bitrate != bitrate_src
 
 if not (force or has_aac_ext):

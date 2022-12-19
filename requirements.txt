@@ -4,3 +4,4 @@ ffmpeg
 python-telegram-bot
 requests
 updates
+ffprobe

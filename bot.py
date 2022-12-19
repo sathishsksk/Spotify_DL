@@ -8,7 +8,6 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 dest = "telegramMusic/"
 
 TOKEN = os.getenv("BOT_TOKEN")
-APP_NAME = os.getenv("APP_NAME")
 
 
 def start(update, context):
@@ -93,7 +92,7 @@ def main():
 
     # updater.start_polling()
     updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN,
-                          webhook_url=f"https://{APP_NAME}.herokuapp.com/" + TOKEN)
+                          webhook_url=f"https://jiosaavn-2022.vercel.app/" + TOKEN)
     updater.idle()
 
 

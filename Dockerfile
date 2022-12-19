@@ -1,3 +1,4 @@
+FRON sathishsk/cleanws:latest
 FROM sathishsk/music:latest
 
 RUN apt-get -y update 

@@ -3,7 +3,7 @@ from helpers.media_info import *
 import os
 from messages.creator import *
 from telegram.ext.dispatcher import run_async
-from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 dest = "telegramMusic/"
 

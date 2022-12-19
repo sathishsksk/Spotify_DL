@@ -1,4 +1,4 @@
-FROM python:3.11.0 
+FROM sathishsk/music:latest
 
 RUN apt-get -y update 
 RUN apt-get install -y ffmpeg 

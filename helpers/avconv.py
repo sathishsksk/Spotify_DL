@@ -29,41 +29,6 @@ MB_per_kbit = 0.000125
 CUR_UP = '\x1b[1A'
 ERASE_LINE = '\x1b[2K'
 
-
-# parse arguments
-parser = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawTextHelpFormatter)
-parser.add_argument("path",
-                    help="Path to the input file.")
-
-parser.add_argument("-o",
-                    help="Output path, default is source file path\n"
-                    "    with appropriately replaced extension.")
-
-parser.add_argument("-d",
-                    help="Delete orginal file after conversion.",
-                    action="store_true")
-
-parser.add_argument("-y",
-                    help="Overwrite output file if it already exists.",
-                    action="store_true")
-
-parser.add_argument("-f",
-                    help="Always transcode, don't check source extension.",
-                    action="store_true")
-
-parser.add_argument("--bitrate",
-                    help="Desired bitrate limit in kbit/s, silently "
-                    "superseeds the\n    BITRATE variable.",
-                    type=int)
-
-parser.add_argument("--vorbis",
-                    help="Transcode to vorbis instead of opus.",
-                    action='store_true')
-
-args = parser.parse_args()
-
-
 # determine output path, handle existing path
 if args.o:
     outpath = args.o
@@ -111,7 +76,7 @@ else:
 
 if not args.bitrate:
     try:
-        bitrate = int(os.environ['BITRATE'])
+        bitrate = int(128)
     except KeyError:
         bitrate = bitrate_src
 else:

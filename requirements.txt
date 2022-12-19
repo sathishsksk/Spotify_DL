@@ -2,3 +2,5 @@ youtube-dl
 mutagen
 ffmpeg
 python-telegram-bot
+requests
+updates

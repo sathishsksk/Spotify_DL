@@ -15,6 +15,15 @@ def download_song(update, url, name):
             "preferredcodec": "mp3",
             "preferredquality": "320"
         }]
+    },
+    {
+        "format": "bestaudio/best",
+        "outtmpl": f"telegramMusic/{name}"+".%(ext)s",
+        "postprocessors": [{
+            "key": "FFmpegExtractAudio",
+            "preferredcodec": "mp3",
+            "preferredquality": "128"
+        }]
     }
 
     try:

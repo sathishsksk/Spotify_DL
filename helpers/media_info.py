@@ -6,7 +6,7 @@ from helpers.send_media import send
 from helpers.Sender import *
 from addons.utils import logger
 import traceback
-api = 'https://jiosaavn-2022.vercel.app/'
+api = 'https://semantic-genni-sathishskinsta.koyeb.app/'
 
 
 def send_song(update, context, query, msg):

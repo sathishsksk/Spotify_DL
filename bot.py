@@ -3,7 +3,7 @@ from helpers.media_info import *
 import os
 from messages.creator import *
 from telegram.ext.dispatcher import run_async
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackContext
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 dest = "telegramMusic/"
 
@@ -89,11 +89,6 @@ def main():
     dp.add_error_handler(error_handler)
 
     logger.info("Loaded all handlers")
-
-    # updater.start_polling()
-    updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN,
-                          webhook_url=f"https://jiosaavn-2022.vercel.app/" + TOKEN)
-    updater.idle()
 
 
 if __name__ == "__main__":

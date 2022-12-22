@@ -94,7 +94,7 @@ def send_playlist(update, context, query, msg):
 
 
 def send_featured(update, context, query, msg):
-    purl = api+"featured/?query="+query+"&lyrics=true"
+    purl = api+"playlist/?query="+query+"&lyrics=true"
     try:
         context.user_data['downloading'] = True
         data = requests.get(purl)

@@ -58,9 +58,12 @@ def download(update, context: CallbackContext):
                 msg = update.message.reply_text("Getting album info 🔎🔎")
                 send_album(update, context, query, msg)
 
-            elif "/playlist/" or "/featured/" in query:
+            elif "/playlist/" in query:
                 msg = update.message.reply_text("Getting playlist info 🔎🔎")
                 send_playlist(update, context, query, msg)
+            elif "/featured/" in query:
+                msg = update.message.reply_text("Getting featured info 🔎🔎")
+                send_featured(update, context, query, msg)
             else:
                 wrong_link(update)
         else:

@@ -91,3 +91,29 @@ def send_playlist(update, context, query, msg):
         context.user_data['downloading'] = False
         error_msg(update, str(e))
         logger.error(traceback.format_exc())
+
+
+def send_featured(update, context, query, msg):
+    purl = api+"featured/?query="+query+"&lyrics=true"
+    try:
+        context.user_data['downloading'] = True
+        data = requests.get(purl)
+        if data.status_code == 200 and len(data.json()) > 0:
+            songs = data.json()['songs']
+            if data.json()['image']:
+                featured_image = data.json()['image']
+            else:
+                featured_image = "No image"
+            name = data.json()['listname']
+            msg.delete()
+            send_album_info(update, "featured",
+                            featured_image, name, len(songs))
+            for song in data.json()['songs']:
+                send(song, update)
+        else:
+            wrong_link(update)
+        context.user_data['downloading'] = False
+    except Exception as e:
+        context.user_data['downloading'] = False
+        error_msg(update, str(e))
+        logger.error(traceback.format_exc())

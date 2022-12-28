@@ -1,21 +1,21 @@
 {
-  "name": "starter-express-api",
-  "version": "1.0.0",
+  "name": "Music-downloader-bot",
+  "version": "",
   "description": "",
-  "main": "index.js",
+  "main": "bot.py",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+    "url": "git+https://github.com/sathishsksk/Music-downloader-bot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cyclic-software/starter-express-api/issues"
+    "url": "https://github.com/sathishsksk/Music-downloader-bot/issues"
   },
-  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
+  "homepage": "https://github.com/sathishsksk/Music-downloader-bot#readme",
   "dependencies": {
     "express": "^4.17.1"
   }

@@ -5,3 +5,10 @@ python-telegram-bot
 requests
 updates
 ffprobe
+eyeD3
+lyricsgenius
+requests
+spotipy
+youtube_dl
+youtube_search
+python-telegram-bot

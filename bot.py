@@ -141,7 +141,7 @@ def run():
     dispatcher.add_handler(single_handler)
     dispatcher.add_handler(artist_handler)
     dispatcher.add_handler(download1_handler)
-    print('[TELEGRAM BOT] Listening...')
+    print('Bot Started💥💥💥...')
 
 
 if __name__ == '__main__':
